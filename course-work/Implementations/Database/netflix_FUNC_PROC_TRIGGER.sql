@@ -26,7 +26,7 @@ AS
 BEGIN
     SET NOCOUNT ON;
 
-    -- Prevent duplicate emails
+    
     IF EXISTS (SELECT 1 FROM Users WHERE Email = @Email)
     BEGIN
         PRINT 'Error: Email already exists.';
@@ -65,6 +65,7 @@ BEGIN
     END
 END;
 GO
+
 
 
 
